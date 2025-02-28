@@ -1,81 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--v2 with fonts, color, formspark but no @media -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bavington Bees</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|EB+Garamond|Libre+Baskerville|Lato|Playfair+Display">
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        
+        background-color: #fffff0;
+        background-image: url('bee-backround.jpg'); /* Replace with your image URL */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents repeating the image */
+    }
+
         header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-color: #fffff0;
+            color: #000000;
+            padding: 20px 0;
             text-align: center;
         }
-        @media (min-width: 768px) {
-            header {
-                flex-direction: row;
-                text-align: left;
-            }
-            header img {
-                margin-right: 20px;
-            }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffd760;
+            padding: 10px;
         }
-        img {
+        nav a {
+            color: #000000;
+            padding: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #ffff00;
+        }
+        section {
+            padding: 20px;f
+            text-align: left;
+        }
+        
+        h2, h5 {
+            text-align: center;
+            text-indent: 0;
+        }
+        .about {
+            background-color: white;
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            text-indent: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .about img {
+            display: block;
+            margin: 0 auto;
             max-width: 100%;
             height: auto;
         }
-        h1 {
-            font-size: 1.5em;
+        .contact {
+            background-color: white;
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            font-size: 1.25em;
+        footer {
+            background-color: #ffd760;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
         }
-        p {
-            font-size: 1em;
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
         }
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 2em;
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        label.required:after {
+            content: " *";
+            color: red;
+        }
+        .red-asterisk::before {
+            content: "* ";
+            color: red;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
             }
-            p {
-                font-size: 1.2em;
+
+            .about, .contact {
+                width: 90%;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Bavington Bees Logo" width="200" height="100">
 
+    <header>
+        <img src="logo.png" alt="Wacs Logo" width="200" height="100">
+        <h2>Development website</h2>
     </header>
-    <h2>Development Website</h2>
-    <p>Geoff's Brighter</p>
-    <img src="IMG_9430x900.jpg" alt="Award bright" width="300" height="150">
-    <p>Original</p>
-    <img src="2024-awardx900.jpg" alt="Award" width="300" height="416">
-    <p>Max Vertical</p>
-    <img src="2024-Max-Awardx900.jpg" alt="Award" width="300" height="416">
-    <p>Max Vertical Sharpened x10</p>
-    <img src="2024-Max-Awardx900s10.jpg" alt="Award" width="300" height="416">
-    <p>Max Vertical Sharpened x20</p>
-    <img src="2024-Max-Awardx900s20.jpg" alt="Award" width="300" height="416">
-    <p>Max cut frrom Geoff's</p>
-    <img src="IMG_9430-2x900.jpg" alt="Award" width="300" height="416">
-    <p>Award winning honey</p>
-   <p>Please visit my <a href="https://www.instagram.com/bavington.bees/" target="_blank">Instagram</a> page.</p>
+
+    <nav>
+        <a href="#about">About Max</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section id="about">
+        <div class="about">
+            <h2>About</h2>
+            <img src="2024-awardx900.jpg" alt="Award" width="900" height="675">
+            <h5>Award winning honey</h5>
+            <p>Please visit my <a href="https://www.instagram.com/bavington.bees/" target="_blank">Instagram</a> page.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact">
+            <h2>Contact</h2>
+            <form action="https://submit-form.com/6kaGjGHIi-tbr">
+                <label for="name" class="required">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+
+                <label for="email" class="required">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+
+                <label for="phone" class="required">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Telephone number" required>
+
+                <label for="callback" class="required">Contact preference</label>
+                <input type="text" id="callback" name="callback" placeholder="Phone, Email or Text Msg" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Optional Message"></textarea>
+
+                <div
+                    class="cf-turnstile"
+                    data-sitekey="0x4AAAAAAA0P-SZzCVY8JD2r-tbr"
+                    data-callback="javascriptCallback"
+                    aria-label="Captcha Verification"
+                ></div>
+
+                <p class="red-asterisk">Required</p>
+                <button type="submit">Contact Max</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Bavington Bees</p>
+        <p>&copy; 2024 Oakwood Trading Limited. All rights reserved.</p>
+        <p>Sorry just a test page not for public use. Ref gh-ts</p>
+    </footer>
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 
 </body>
 </html>
