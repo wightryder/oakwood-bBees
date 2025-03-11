@@ -118,11 +118,10 @@
         }
         .text-content{
               text-align: left; /* Left-justify text */
-              width: 50%; /* Ensure text takes up full width of the centered box */
+              width: 50%; /* Ensure text aligns with headings */
         }
         .larger-text {
           font-size: 1.2em; /* Adjust the size as needed */
-          font-weight: bold; /* Optional: Make the text bold */
         }
 
         footer {
@@ -158,12 +157,27 @@
             content: "* ";
             color: red;
         }
-        @media (max-width: 600px) {
+
+
+        @media (max-width: 900px) {
             .section-container {
                 flex-direction: column;
-                align-items: center;
+                align-items: center;}
+
+            .text-content{
+              text-align: left; /* Left-justify text */
+              width: 100%; /* Ensure text takes up full width of the centered box */
             }
-        }
+            .larger-text {
+              font-size: 1.1em; /* Adjust the size as needed */
+            }
+        } 
+
+        @media (max-width: 600px) {
+            .larger-text {
+              font-size: 1.0em; /* Adjust the size as needed */
+            }
+        }       
     </style>
 </head>
 <body>
@@ -246,6 +260,7 @@
                 <button type="submit">Contact Max</button>
             </form>
         </section>
+        <a href="#home">To Top</a>
     </div>
     <footer>
         <p>Bavington Bees</p>
