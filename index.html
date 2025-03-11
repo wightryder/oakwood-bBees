@@ -13,11 +13,6 @@
             padding: 0;
             overflow-x: hidden; /* Prevents horizontal scrolling */
             background-color: #FFFFF0;
-            background-image: url('bee-background.jpg');
-            background-size: auto;
-            background-position: center;
-            background-repeat: repeat;
-            background-attachment: fixed; /*may cause problems on mobile*/
         }
 
         header {
@@ -41,24 +36,51 @@
         nav a:hover {
             background-color: #ffff00;
         }
-/* Multi column         
-        .section-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-        .section-item {
-            flex: 1 1 45%;
-            max-width: 600px;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-end Multi columg*/
+
 /*Single Column*/
+        .section-container-single {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Center items horizontally */
+          gap: 20px;
+          padding: 20px;
+        }
+
+        .section-item-single {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Center the box */
+          max-width: 100%; /* Set a maximum width for the centered box */
+          background-color: white;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+/*End Single column*/
+
+/* Multi column*/   
         .section-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+          padding: 20px;
+        }
+
+        .section-item {
+          flex: 1 1 calc(33.33% - 20px);
+          max-width: 600px;
+          background-color: white;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-sizing: border-box; /* Ensure padding is included in width */
+        }
+
+/*end Multi column*/
+
+/*Single Restricted Column */
+        .section-container-narrow {
             display: flex;
             flex-direction: column;
             align-items: center; /* Center items horizontally */
@@ -66,26 +88,43 @@ end Multi columg*/
             padding: 20px;
         }
 
-        .section-item {
-            flex: 1 1 auto; /* Items take up as much space as needed */
-            max-width: 600px; /* Keeps sections from being too wide */
+        .section-item-narrow {
+            flex: 1 1 auto; /* I ems take up as much space as needed */
+            max-width: 900px; /* Keeps sections from being too wide */
             background-color: white;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-/*End Single column*/
+/*End Single restricted column*/
+
 
 
         h2, h5 {
             text-align: center;
         }
+
+        .section-item-single img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }        
         .section-item img {
             display: block;
             margin: 0 auto;
             max-width: 100%;
             height: auto;
         }
+        .text-content{
+              text-align: left; /* Left-justify text */
+              width: 50%; /* Ensure text takes up full width of the centered box */
+        }
+        .larger-text {
+          font-size: 1.2em; /* Adjust the size as needed */
+          font-weight: bold; /* Optional: Make the text bold */
+        }
+
         footer {
             background-color: #ffd760;
             color: black;
@@ -133,29 +172,63 @@ end Multi columg*/
         <h2>Development website</h2>
     </header>
     <nav>
-        <a href="#about">About</a>
-        <a href="#blog">Blog</a>
+        <a href="#home">Home</a>
         <a href="#contact">Contact Us</a>
     </nav>
+    <div class="section-container-single">
+        <section id="home" class="section-item-single home">
+            <img src="2025-03-01-b-checking-hives.jpg" alt="Award">
+            <div class="text-content">
+                <h5>Bavington Bees has five beehives in Brockham in the heart of the Surrey Hills.</h5>
+                <p class="larger-text">Our honeybees produce delicious natural light honey which has won several awards.<p>We harvest the honey in the autumn and sell through <a href="https://theshopatstroodgreen.co.uk/" target="_blank">The Shop at Strood Green</a> in Brockham and directly to consumers.<p/>
+                <p>If you would like to find out more please <a href="#contact">contact</a> me or visit our <a href="https://www.instagram.com/bavington.bees/" target="_blank">Instagram</a> page.</p>
+            </div>
+        </section>
+    </div>
     <div class="section-container">
-        <section id="about" class="section-item about">
-            <h2>About</h2>
-            <img src="2024-awardx900.jpg" alt="Award">
+        <section id="gallery" class="section-item gallery">
+            <img src="2024-10-01h-01-awardx900.jpg" alt="Award">
             <h5>Award winning honey</h5>
-            <p>Bavington Bees has five beehives in Brockham in the heart of the Surrey Hills.</p>
-            <p>Our honeybees produce delicious natural light honey winning several awards.<p>We harvest the honey in the autumn and sell through <a href="https://theshopatstroodgreen.co.uk/" target="_blank">The Shop at Strood Green</a> in Brockham and directly to consumers.<p/>
-            <p>If you would like to find out more please <a href="#contact">contact</a> me or visit our <a href="https://www.instagram.com/bavington.bees/" target="_blank">Instagram</a> page.</p>
+            <p>Max receiving awards at the 2024 Reigate Honey Show.</p>
         </section>
 
-        <section id="blog" class="section-item blog">
-            <h2>Blog</h2>
-            <img src="2025-03-01p-04-checking-hives.jpg" alt="Award">
+        <section id="gallery" class="section-item gallery">
+            <img src="2025-03-01h-02-checking-hives.jpg" alt="Checking">
             <h5>Start of the season</h5>
             <p>Max checking to see how the bees have survived the winter.</p>
+        </section>
+
+        <section id="gallery" class="section-item gallery">
+            <img src="2025-03-01h-03-checking-hives.jpg" alt="Checking">
+            <h5>Start of the season</h5>
             <p>It is interesting to see how the bees have coped with the slightly less insulation provided by the plastic hive compared to our cedar hives.</p>
         </section>
 
-        <section id="contact" class="section-item contact">
+
+        <section id="gallery" class="section-item gallery">
+            <img src="2025-03-01v-01-checking-hives.jpg" alt="Checking">
+            <h5>Start of the season</h5>
+            <p>Optional text.</p>
+        </section>        
+
+        <section id="gallery" class="section-item gallery">
+            <img src="2025-03-01v-02-checking-hives.jpg" alt="Checking">
+            <h5>Start of the season</h5>
+            <p>Optional text.</p>
+        </section>
+
+
+        <section id="gallery" class="section-item gallery">
+            <img src="2025-03-01v-02-checking-hives.jpg" alt="Checking">
+            <h5>Start of the season</h5>
+            <p>Optional text.</p>            
+        </section>
+    </div>
+
+
+
+    <div class="section-container-narrow">
+        <section id="contact" class="section-item-narrow contact">
             <h2>Contact</h2>
             <form action="https://submit-form.com/6kaGjGHIi-tbr" method="POST">
                 <label for="name" class="required">Name</label>
