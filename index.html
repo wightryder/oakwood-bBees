@@ -91,7 +91,7 @@
             box-sizing: border-box;
         }
 
-        .intro-text h2, h3, h4, h5 {
+        .intro-title h2, h3, h4, h5 {
             transform: translateX(-3%); 
         }
 
@@ -160,11 +160,6 @@
             text-align: center;
         }
 
- 
-        .text-content{
-              text-align: left; /* Left-justify text */
-              width: 50%; /* Ensure text aligns with headings */
-        }
         .larger-text {
           font-size: 1.2em; /* Adjust the size as needed */
         }
@@ -239,13 +234,18 @@
                 padding-left: 30px;
             }
     
-            header .strapline, .instagram-icon {
+            header .strapline, .instagram-icon, {
                 display: none; /* Hide on mobile */
             }
+
+            .intro-title {
+               font-size: 0.7em;   /* Change font size  on mobile */
+            }            
             
             .intro-icon {
-                display:block; /*display on mobile */
+                display: block; /* Display on mobile */
             }
+
         }       
     </style>
 </head>
@@ -274,7 +274,9 @@
 
     <section class="intro-container">
         <section class="intro-text">
-            <h3>Bavington Bees has five beehives in Brockham in the heart of the Surrey Hills.</h3> 
+            <div  class="intro-title">
+              <h2>Bavington Bees has five beehives in Brockham in the heart of the Surrey Hills.</h2> 
+          </div>
             <p class="larger-text">Our honeybees produce delicious natural light honey which has won several awards.</p>
             <p>We harvest the honey in the autumn and sell through <a href="https://theshopatstroodgreen.co.uk/" target="_blank">The Shop at Strood Green</a> in Brockham and directly to consumers.</p>
             <p>If you would like to find out more please <a href="#contact">contact</a> us or visit our <a href="https://www.instagram.com/bavington.bees/" target="_blank">Instagram</a> page.</p>
