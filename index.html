@@ -99,13 +99,26 @@
         .hero-image {
             display: flex;
             justify-content: center;
+            position: relative; /* Needed for absolute positioning */
+            width: 100%; /* Ensure the container takes up the intended space */
+            max-width: 1600px; /* Prevent it from getting too large on big screens */
+        }
+
+        .hero-image::before {
+            content: "";
+            display: block;
+            width: 100%; /* Ensures it stretches to container width */
+            padding-top: 25%; /* 4:1 aspect ratio */
+            background: #FFD760; /* Placeholder color */
         }
 
         .hero-image img {
             display: block;
-            max-width: 100%;
+            width: 100%;
             height: auto;
-            aspect-ratio: 4 / 1;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .intro-container {
