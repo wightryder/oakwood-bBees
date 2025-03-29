@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Framework v1.00 2025-03-20-->
-<!--Content v1.01dev 2025-03-23 self hosted fonts and webp images hero eager loading rest lazy-->
+<!--Content v1.01dev 2025-03-23 self hosted fonts and webp images hero eager loading rest lazy. features and contact centered in mobile-->
 
 
 <head>
@@ -147,6 +147,7 @@
         }
 
         .intro-icon {
+            width: 50px;
             height: 50px;
             display: none;
         }
@@ -185,17 +186,16 @@
             display: flex;
             flex-direction: column;
             align-items: center; /* Center items horizontally */
-            gap: 20px;
             padding: 20px;
         }
 
         .item-contact {
-            /*flex: 1 1 auto;  Items take up as much space as needed */
-            width: 100%;
-            max-width: 900px; /* Keeps sections from being too wide */
+            width: 80vw; 
+            max-width: 768px; /* Keeps sections from being too wide */
             background-color: white;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            box-sizing: border-box; /* Ensure padding is included in width */
         }
 
 /*End Single contact column*/
@@ -249,9 +249,15 @@
         @media (max-width: 900px) {
 
             .feature-container {
+                display: flex;
                 flex-direction: column;
                 align-items: center;
              }
+
+            .feature-item {
+                width: 90%; /* Adjust width to ensure it is properly centered */
+                max-width: 600px;
+            }             
 
             .larger-text {
               font-size: 1.1em; /* Adjust the size as needed */
@@ -288,6 +294,7 @@
             
             .intro-icon {
                 display: block; /* Display on mobile */
+                padding:20px;
             }
 
         }       
@@ -338,18 +345,18 @@
 
     <div class="feature-container">
         <article class="feature-item">
-            <img src="2025-03-01h-honey-jars.webp" alt="Honey Jars" loading="lazy">>
+            <img src="2025-03-01h-honey-jars.webp" alt="Honey Jars" loading="lazy">
         </article>
 
         <article class="feature-item"> 
-            <img src="2024-10-01h-award.webp" alt="Awards" loading="lazy">>
+            <img src="2024-10-01h-award.webp" alt="Awards" loading="lazy">
 
         </article>
 
         <article class="feature-item">
-            <img src="2025-03-01h-checking-hives.webp" alt="Max checking the hives" loading="lazy">>
+            <img src="2025-03-01h-checking-hives.webp" alt="Max checking the hives" loading="lazy">
         </article>
-
+    </div>
 
     <div class="container-contact">
         <section id="contact" class="item-contact">
