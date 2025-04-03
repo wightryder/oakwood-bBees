@@ -205,6 +205,7 @@
     }
     
     footer .item-footer {
+        width: 80vw;
         color: black;
         text-align: center;
         padding: 10px;
